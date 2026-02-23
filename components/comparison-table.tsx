@@ -9,7 +9,7 @@ const products = [
     weight: "★★★★★ (超軽量)",
     ease: "★★★★★ (全開する)",
     grip: "★★★★☆",
-    link: "★ここに楽天アフィリエイトURL★",
+    link: "https://hb.afl.rakuten.co.jp/ichiba/51442d19.174ebf28.51442d1a.c45ad92f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcarecle%2F100554%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
     tag: "一番人気"
   },
   {
