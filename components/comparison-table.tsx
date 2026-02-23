@@ -18,7 +18,7 @@ const products = [
     weight: "★★★★☆ (水に浮く)",
     ease: "★★★★☆ (面ファスナー)",
     grip: "★★★★☆",
-    link: "★ここに楽天アフィリエイトURL★",
+    link: "https://hb.afl.rakuten.co.jp/ichiba/5144333f.2e1e532d.51443340.05afc83f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fliberty-2024%2Fkaihoshugilo11%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
     tag: "おしゃれ"
   },
   {
@@ -27,7 +27,7 @@ const products = [
     weight: "★★★★☆",
     ease: "★★★★☆",
     grip: "★★★★★ (最高性能)",
-    link: "★ここに楽天アフィリエイトURL★",
+    link: "https://hb.afl.rakuten.co.jp/ichiba/514434c3.b1908aee.514434c4.4e78978c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Felephant-sports%2Frakuraku-l007%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
     tag: "滑り止め重視"
   }
 ]
