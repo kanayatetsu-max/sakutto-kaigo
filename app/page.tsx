@@ -1,9 +1,9 @@
 "use client"
 
-import React, { useState } from 'react'
-import { Search, Menu, Camera, Shield, Utensils, Activity, ChevronDown, ChevronUp, ExternalLink, Heart, Star, ShoppingCart } from "lucide-react"
+import React from 'react'
+import { Menu, Heart, ShoppingCart } from "lucide-react"
 
-// --- 簡易版コンポーネント定義 (エラー回避のため1枚にまとめます) ---
+// --- コンポーネント定義 ---
 
 const SiteHeader = () => (
   <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur">
@@ -13,10 +13,7 @@ const SiteHeader = () => (
         <span>サクっと介護</span>
       </div>
       <nav className="hidden md:flex gap-6 text-sm font-medium">
-        <a href="#safety">家の中の安全</a>
-        <a href="#hygiene">清拭・衛生</a>
-        <a href="#rehab">食事・リハビリ</a>
-        <a href="#monitoring">見守り・防犯</a>
+        <a href="#comparison">人気商品比較</a>
       </nav>
       <button className="md:hidden"><Menu /></button>
     </div>
@@ -24,42 +21,63 @@ const SiteHeader = () => (
 )
 
 const HeroSection = () => (
-  <section className="bg-blue-50 py-12 md:py-20">
-    <div className="container px-4 mx-auto text-center">
-      <h1 className="text-3xl md:text-5xl font-bold tracking-tighter text-gray-900 mb-6">
-        親の「困った」を、<br />楽天の「便利」で解決する。
-      </h1>
-      <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl mb-8">
-        転倒防止から見守りカメラまで、楽天ランキング上位の介護用品を徹底比較。
-      </p>
-      <div className="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="#comparison" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition">人気商品を比較する</a>
-      </div>
-    </div>
+  <section className="bg-blue-50 py-12 md:py-20 text-center px-4">
+    <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+      親の「困った」を、<br />楽天の「便利」で解決する。
+    </h1>
+    <p className="text-gray-500 md:text-xl mb-8">
+      見守りカメラから介護用品まで、楽天で本当におすすめできるものだけ。
+    </p>
   </section>
 )
 
 const ComparisonTable = () => (
-  <section id="comparison" className="py-12 bg-white">
-    <div className="container px-4 mx-auto">
-      <h2 className="text-2xl font-bold text-center mb-8">【2026年最新】見守りカメラ徹底比較</h2>
-      <div className="overflow-x-auto border rounded-xl">
-        <table className="w-full text-left border-collapse">
-          <thead className="bg-gray-50">
-            <tr>
-              <th className="p-4 border-b">比較項目</th>
-              <th className="p-4 border-b text-blue-600">TP-Link Tapo C210</th>
-              <th className="p-4 border-b text-orange-600">Panasonic 見守り</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td className="p-4 border-b font-medium">価格</td><td className="p-4 border-b">約5,000円〜</td><td className="p-4 border-b">約15,000円〜</td></tr>
-            <tr><td className="p-4 border-b font-medium">画質</td><td className="p-4 border-b">2K (高画質)</td><td className="p-4 border-b">フルHD</td></tr>
-            <tr><td className="p-4 border-b font-medium">楽天評価</td><td className="p-4 border-b">★4.6</td><td className="p-4 border-b">★4.4</td></tr>
-            <tr>
-              <td className="p-4 border-b"></td>
-              <td className="p-4 border-b">
-                <a href="★ここに楽天Tapoのリンクを貼る★" target="_blank" className="inline-flex items-center justify-center bg-red-600 text-white px-4 py-2 rounded text-sm font-bold">
-                  <ShoppingCart className="w-4 h-4 mr-2"/>最安値をチェック
-                </a>
-              </td>
+  <section id="comparison" className="py-12 bg-white px-4">
+    <div className="container mx-auto max-w-4xl border rounded-xl overflow-hidden">
+      <table className="w-full text-left border-collapse">
+        <thead className="bg-gray-50">
+          <tr>
+            <th className="p-4 border-b">比較項目</th>
+            <th className="p-4 border-b text-blue-600">TP-Link Tapo</th>
+            <th className="p-4 border-b text-orange-600">Panasonic</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td className="p-4 border-b">価格</td><td className="p-4 border-b">約5,000円</td><td className="p-4 border-b">約15,000円</td></tr>
+          <tr><td className="p-4 border-b">画質</td><td className="p-4 border-b">2K (高画質)</td><td className="p-4 border-b">フルHD</td></tr>
+          <tr>
+            <td className="p-4 border-b">リンク</td>
+            <td className="p-4 border-b">
+              <a href="★ここに楽天リンク★" target="_blank" className="bg-red-600 text-white px-4 py-2 rounded text-xs font-bold block text-center">
+                最安値をチェック
+              </a>
+            </td>
+            <td className="p-4 border-b">
+              <a href="★ここに楽天リンク★" target="_blank" className="bg-red-600 text-white px-4 py-2 rounded text-xs font-bold block text-center">
+                最安値をチェック
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+)
+
+export default function Home() {
+  return (
+    <div className="flex min-h-screen flex-col">
+      <SiteHeader />
+      <main>
+        <HeroSection />
+        <ComparisonTable />
+        <section className="py-12 bg-gray-50 text-center">
+          <p className="text-gray-600">楽天お買い物マラソン中に買うのが一番お得です！</p>
+        </section>
+      </main>
+      <footer className="bg-gray-900 text-white py-8 text-center">
+        <p>© 2026 サクっと介護</p>
+      </footer>
+    </div>
+  )
+}
