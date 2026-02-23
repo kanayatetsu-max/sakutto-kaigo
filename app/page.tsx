@@ -8,17 +8,40 @@ import { FAQSection } from "@/components/faq-section"
 import { CTASection } from "@/components/cta-section"
 import { SiteFooter } from "@/components/site-footer"
 
-// SEO用の構造化データ（FAQ）
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
     {
       "@type": "Question",
-      name: "リハビリシューズは楽天で買うのがお得ですか？",
+      name: "介護保険でレンタルできるものと、自費で購入した方がいいものの違いは？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "はい。楽天は種類が豊富で、お買い物マラソンやスーパーSALEを活用することで高いポイント還元を受けられるため、実店舗よりお得に購入できることが多いです。",
+        text: "介護保険では車いすや特殊寝台などの「福祉用具貸与」が対象ですが、手すりの取付けや段差解消は「住宅改修」として最大20万円まで支給されます。一方、センサーライトや見守りカメラなどのガジェット類は保険対象外のため、楽天など通販での購入がお得です。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "親が機械に弱いのですが、見守りカメラは使えますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "最近の見守りカメラは、親御さん側は何もしなくてOK。電源を挿してWi-Fiに繋ぐだけで、お子さんのスマホから映像を確認できます。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "楽天で購入するメリットは？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "楽天はポイント還元率が高く、お買い物マラソンやスーパーSALEの時期に購入すれば実質10〜20%以上のポイントバックが可能です。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "転倒防止マットは本当に効果がありますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "厚生労働省のデータによると、高齢者の室内事故の約半数が「転倒」です。吸着タイプの転倒防止マットは、工事不要で即日導入でき、特にフローリングの廊下やお風呂の出入り口に効果的です。",
       },
     },
   ],
@@ -31,34 +54,16 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      
-      {/* 1. 本物のヘッダー（画像上部のナビ） */}
       <SiteHeader />
-      
       <main>
-        {/* 2. 復活のヒーローエリア（家族の写真とメインコピー） */}
         <HeroSection />
-        
-        {/* 3. 4つのカテゴリーカード（家の中の安全など） */}
         <CategoryCards />
-        
-        {/* 4. リハビリシューズ比較表 */}
         <ComparisonTable />
-        
-        {/* 5. 利用者の声（レビュー） */}
         <ReviewCards />
-        
-        {/* 6. お役立ち記事リスト */}
         <ArticleList />
-        
-        {/* 7. よくある質問 */}
         <FAQSection />
-        
-        {/* 8. 最終案内（CTA） */}
         <CTASection />
       </main>
-
-      {/* 9. フッター */}
       <SiteFooter />
     </div>
   )
