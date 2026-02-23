@@ -8,17 +8,17 @@ import { FAQSection } from "@/components/faq-section"
 import { CTASection } from "@/components/cta-section"
 import { SiteFooter } from "@/components/site-footer"
 
-// SEO用のFAQデータ
+// SEO用の構造化データ（FAQ）
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
     {
       "@type": "Question",
-      name: "介護保険でレンタルできるものと、自費で購入した方がいいものの違いは？",
+      name: "リハビリシューズは楽天で買うのがお得ですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "介護保険では車いすや特殊寝台などの「福祉用具貸与」が対象ですが、ガジェット類は保険対象外のため、楽天など通販での購入がお得です。",
+        text: "はい。楽天は種類が豊富で、お買い物マラソンやスーパーSALEを活用することで高いポイント還元を受けられるため、実店舗よりお得に購入できることが多いです。",
       },
     },
   ],
@@ -31,29 +31,30 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      {/* 1. ヘッダー（ロゴやメニュー） */}
+      
+      {/* 1. 本物のヘッダー（画像上部のナビ） */}
       <SiteHeader />
       
       <main>
-        {/* 2. ヒーロー（「親の困ったを〜」のメイン部分） */}
+        {/* 2. 復活のヒーローエリア（家族の写真とメインコピー） */}
         <HeroSection />
         
-        {/* 3. カテゴリーカード（4つの柱） */}
+        {/* 3. 4つのカテゴリーカード（家の中の安全など） */}
         <CategoryCards />
         
-        {/* 4. 比較テーブル（リハビリシューズの比較） */}
+        {/* 4. リハビリシューズ比較表 */}
         <ComparisonTable />
         
-        {/* 5. レビューカード（利用者の声） */}
+        {/* 5. 利用者の声（レビュー） */}
         <ReviewCards />
         
-        {/* 6. 記事リスト */}
+        {/* 6. お役立ち記事リスト */}
         <ArticleList />
         
         {/* 7. よくある質問 */}
         <FAQSection />
         
-        {/* 8. 下部ボタンエリア */}
+        {/* 8. 最終案内（CTA） */}
         <CTASection />
       </main>
 
